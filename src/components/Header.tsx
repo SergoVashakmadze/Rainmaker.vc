@@ -14,8 +14,8 @@ export function Header() {
                 className="h-10 w-auto transition-all duration-300 group-hover:scale-110"
               />
               <div className="flex flex-col">
-                <div className="flex items-center">
-                  <span className="text-xl font-bold text-white">Rainmaker </span>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-xl font-bold text-white">Rainmaker</span>
                   <span className="text-xl font-bold text-violet-400">VC</span>
                 </div>
                 <span className="text-[10px] text-violet-400 -mt-0.5 uppercase tracking-wider font-bold">Coming Soon</span>
