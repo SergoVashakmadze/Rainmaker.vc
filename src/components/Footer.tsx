@@ -21,15 +21,12 @@ export function Footer() {
           <p className="text-gray-300 text-sm font-light leading-relaxed mb-4 max-w-md">
             An upcoming Venture Capital Fund. Discovering and investing in the most promising technologies at the forefront of the technology revolution.
           </p>
-          <p className="text-gray-400 text-sm font-light">
-            Email: <a href="mailto:sergo.vashakmadze@rainmaker.partners" className="text-violet-400 hover:text-violet-300 transition-colors">sergo.vashakmadze@rainmaker.partners</a>
-          </p>
         </div>
 
         {/* Bottom Section */}
         <div className="pt-8 border-t border-violet-800/30">
           <p className="text-center text-base font-semibold text-gray-300 mb-2">
-            Built with love by{' '}
+            Built with ❤️ by{' '}
             <a
               href="https://www.linkedin.com/in/sergovashakmadze/"
               target="_blank"
