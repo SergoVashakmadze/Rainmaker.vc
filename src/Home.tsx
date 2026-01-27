@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Rocket, Target, TrendingUp, Users, Globe, Building, Lightbulb, Award, CheckCircle, BarChart3, Network, DollarSign, Eye, Brain, Handshake, Scale, ChevronRight, Star, Shield, Coins, TreePine, Briefcase, Lock } from 'lucide-react';
+import { Rocket, Target, TrendingUp, Users, Globe, Lightbulb, Award, CheckCircle, BarChart3, Network, DollarSign, Eye, Brain, Handshake, Scale, ChevronRight, Shield, Coins, TreePine, Briefcase, Lock } from 'lucide-react';
 
 // Floating Elements Component - Purple Theme
 const FloatingElements: React.FC = () => (
