@@ -273,7 +273,7 @@ const RainmakerVC: React.FC = () => {
             </div>
             <div className="flex items-center gap-2">
               <TrendingUp className="w-5 h-5 text-fuchsia-400" />
-              <span>All-Stage Investing</span>
+              <span>Early-Stage Focus</span>
             </div>
             <div className="flex items-center gap-2">
               <Award className="w-5 h-5 text-indigo-400" />
@@ -333,45 +333,37 @@ const RainmakerVC: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">All-Stage Investment Approach</h2>
+              <h2 className="text-4xl font-bold text-white mb-4">Early-Stage Investment Focus</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We plan to invest across the entire venture lifecycle, from earliest concepts to growth-stage scale-ups
+                We plan to invest in the earliest stages of a company's journey, from initial concept to Series A
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
+                {
+                  stage: "Pre-Seed",
+                  investment: "$100K - $500K",
+                  focus: "Idea validation & MVP",
+                  metrics: "Pre-revenue",
+                  icon: Lightbulb,
+                  color: "from-yellow-500 to-orange-500"
+                },
                 {
                   stage: "Seed",
                   investment: "$500K - $2M",
                   focus: "Product-market fit validation",
-                  metrics: "Pre-revenue to $500K ARR",
-                  icon: Lightbulb,
-                  color: "from-yellow-500 to-orange-500"
+                  metrics: "Early traction to $500K ARR",
+                  icon: Rocket,
+                  color: "from-violet-500 to-purple-500"
                 },
                 {
                   stage: "Series A",
                   investment: "$2M - $10M",
                   focus: "Go-to-market acceleration",
                   metrics: "$500K - $3M ARR",
-                  icon: Rocket,
-                  color: "from-violet-500 to-purple-500"
-                },
-                {
-                  stage: "Series B/C",
-                  investment: "$10M - $30M",
-                  focus: "Market expansion & scaling",
-                  metrics: "$3M - $20M ARR",
                   icon: TrendingUp,
                   color: "from-purple-500 to-fuchsia-500"
-                },
-                {
-                  stage: "Growth",
-                  investment: "$30M+",
-                  focus: "Category leadership",
-                  metrics: "$20M+ ARR",
-                  icon: Award,
-                  color: "from-fuchsia-500 to-pink-500"
                 }
               ].map((stage, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-violet-500/50 transition-all group">
