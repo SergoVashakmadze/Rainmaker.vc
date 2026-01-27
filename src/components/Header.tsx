@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom';
+import { Clock } from 'lucide-react';
 
 export function Header() {
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <header className="fixed top-[46px] left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50">
@@ -16,28 +21,30 @@ export function Header() {
                   <span className="text-xl font-bold text-white">Rainmaker</span>
                   <span className="text-xl font-bold text-violet-400 ml-0.5">VC</span>
                 </div>
-                <span className="text-[10px] text-violet-400 -mt-0.5 uppercase tracking-wider font-bold">VENTURE CAPITAL</span>
+                <span className="text-[10px] text-violet-400 -mt-0.5 uppercase tracking-wider font-bold">Coming Soon</span>
               </div>
             </Link>
 
             {/* Desktop Right Section */}
             <div className="hidden lg:flex items-center gap-4">
-              <a
-                href="mailto:info@rainmaker.vc"
+              <button
+                onClick={scrollToContact}
                 className="flex items-center gap-2 px-6 py-2.5 rounded-full text-white text-sm font-medium transition-colors bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500"
               >
-                Contact Us
-              </a>
+                <Clock className="w-4 h-4" />
+                Get Notified
+              </button>
             </div>
 
             {/* Mobile Right Section */}
             <div className="lg:hidden flex items-center">
-              <a
-                href="mailto:info@rainmaker.vc"
+              <button
+                onClick={scrollToContact}
                 className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-white text-xs font-medium bg-gradient-to-r from-violet-600 to-purple-600"
               >
-                Contact
-              </a>
+                <Clock className="w-3 h-3" />
+                Notify
+              </button>
             </div>
           </nav>
         </div>

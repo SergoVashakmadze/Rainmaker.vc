@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Rocket, Target, TrendingUp, Users, Globe, Lightbulb, Award, CheckCircle, BarChart3, Network, DollarSign, Eye, Brain, Handshake, Scale, ChevronRight, Shield, Coins, TreePine, Briefcase, Lock } from 'lucide-react';
+import { Rocket, Target, TrendingUp, Users, Globe, Lightbulb, Award, CheckCircle, BarChart3, Network, DollarSign, Eye, Brain, Handshake, Scale, ChevronRight, Shield, Clock } from 'lucide-react';
 
 // Floating Elements Component - Purple Theme
 const FloatingElements: React.FC = () => (
@@ -101,17 +101,21 @@ const RainmakerVC: React.FC = () => {
   const heroScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.95]);
   const heroY = useTransform(scrollYProgress, [0, 0.5], [0, 50]);
 
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen text-white relative">
       <Helmet>
         <title>Rainmaker VC - Investing in Innovative, Disruptive & Scalable Technologies</title>
         <meta name="title" content="Rainmaker VC - Investing in Innovative, Disruptive & Scalable Technologies" />
-        <meta name="description" content="Rainmaker VC is a venture capital investment platform discovering and investing in the most promising technologies. Venture Capital, Digital Assets, Tokenization, and more." />
+        <meta name="description" content="Rainmaker VC is an upcoming venture capital fund focused on discovering and investing in the most promising technologies. Coming Soon." />
         <meta property="og:title" content="Rainmaker VC - Investing in Innovative, Disruptive & Scalable Technologies" />
-        <meta property="og:description" content="Rainmaker VC is a venture capital investment platform discovering and investing in the most promising technologies." />
+        <meta property="og:description" content="Rainmaker VC is an upcoming venture capital fund focused on discovering and investing in the most promising technologies. Coming Soon." />
         <meta property="og:site_name" content="Rainmaker VC" />
         <meta property="twitter:title" content="Rainmaker VC - Investing in Innovative, Disruptive & Scalable Technologies" />
-        <meta property="twitter:description" content="Rainmaker VC is a venture capital investment platform discovering and investing in the most promising technologies." />
+        <meta property="twitter:description" content="Rainmaker VC is an upcoming venture capital fund focused on discovering and investing in the most promising technologies. Coming Soon." />
       </Helmet>
 
       {/* Hero Section - Animated Purple Theme */}
@@ -143,7 +147,7 @@ const RainmakerVC: React.FC = () => {
         <div className="container mx-auto px-6 relative z-10 min-h-screen flex items-center">
           <div className="max-w-5xl mx-auto w-full">
             <div className="text-center space-y-8">
-              {/* Badge */}
+              {/* Coming Soon Badge */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -154,7 +158,7 @@ const RainmakerVC: React.FC = () => {
                   <span className="animate-ping-purple absolute inline-flex h-full w-full rounded-full bg-violet-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-violet-500"></span>
                 </span>
-                <span className="text-violet-300 text-sm font-medium tracking-wide">Rainmaker Partners</span>
+                <span className="text-violet-300 text-sm font-medium tracking-wide">Coming Soon</span>
               </motion.div>
 
               {/* Main Headline */}
@@ -194,16 +198,16 @@ const RainmakerVC: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
               >
-                <a href="mailto:info@rainmaker.vc" className="group relative bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 hover:from-violet-400 hover:via-purple-400 hover:to-fuchsia-400 text-white px-10 py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 shadow-lg shadow-violet-500/40 hover:shadow-purple-500/50 hover:scale-105 overflow-hidden">
+                <button onClick={scrollToContact} className="group relative bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 hover:from-violet-400 hover:via-purple-400 hover:to-fuchsia-400 text-white px-10 py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 shadow-lg shadow-violet-500/40 hover:shadow-purple-500/50 hover:scale-105 overflow-hidden">
                   <span className="relative z-10 flex items-center gap-2">
-                    <Rocket className="w-5 h-5" />
-                    Get In Touch
+                    <Clock className="w-5 h-5" />
+                    Notify Me When Ready
                   </span>
-                </a>
-                <a href="mailto:info@rainmaker.vc" className="glass hover:bg-white/15 text-white px-10 py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 border border-white/20 hover:border-violet-400/50 hover:scale-105">
+                </button>
+                <button onClick={scrollToContact} className="glass hover:bg-white/15 text-white px-10 py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 border border-white/20 hover:border-violet-400/50 hover:scale-105">
                   <Eye className="w-5 h-5" />
-                  Investment Opportunities
-                </a>
+                  Learn More
+                </button>
               </motion.div>
 
               {/* Stats Row */}
@@ -215,19 +219,19 @@ const RainmakerVC: React.FC = () => {
               >
                 <div className="flex items-center gap-2">
                   <Globe className="w-4 h-4 text-violet-400" />
-                  <span>Global Investors</span>
+                  <span>Global Focus</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Target className="w-4 h-4 text-purple-400" />
-                  <span>Curated Opportunities</span>
+                  <span>Sector Agnostic</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Brain className="w-4 h-4 text-fuchsia-400" />
-                  <span>AI-Powered Platform</span>
+                  <span>Technology-First</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <TrendingUp className="w-4 h-4 text-indigo-400" />
-                  <span>Since 2015</span>
+                  <Rocket className="w-4 h-4 text-indigo-400" />
+                  <span>Launching Soon</span>
                 </div>
               </motion.div>
             </div>
@@ -255,7 +259,7 @@ const RainmakerVC: React.FC = () => {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0F0A1F] to-transparent" />
       </motion.section>
 
-      {/* Investment Philosophy */}
+      {/* Investment Philosophy Bar */}
       <section className="py-6 bg-white/5 backdrop-blur-sm border-y border-white/10">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap items-center justify-center gap-12 text-sm text-gray-400">
@@ -265,91 +269,28 @@ const RainmakerVC: React.FC = () => {
             </div>
             <div className="flex items-center gap-2">
               <Target className="w-5 h-5 text-purple-400" />
-              <span>Deep Technology Expertise</span>
+              <span>Sector Agnostic</span>
             </div>
             <div className="flex items-center gap-2">
               <TrendingUp className="w-5 h-5 text-fuchsia-400" />
-              <span>Proven Track Record</span>
+              <span>All-Stage Investing</span>
             </div>
             <div className="flex items-center gap-2">
               <Award className="w-5 h-5 text-indigo-400" />
-              <span>Technology Revolution</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Investment Focus Areas */}
-      <section className="py-20 bg-gradient-to-b from-[#0F0A1F] to-slate-900/50">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Investment Focus Areas</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We dedicate capital to promising startups and investments with strong growth potential across diverse asset classes
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: Rocket,
-                  title: "Venture Capital",
-                  description: "Funds allocated to early-stage businesses with strong growth prospects. We identify and back exceptional founders building transformative companies.",
-                  gradient: "from-violet-500 to-purple-500"
-                },
-                {
-                  icon: Coins,
-                  title: "Digital Assets",
-                  description: "Strategic investments in blockchain technology, cryptocurrencies, and digital asset infrastructure powering the next generation of finance.",
-                  gradient: "from-purple-500 to-fuchsia-500"
-                },
-                {
-                  icon: Lock,
-                  title: "Tokenization",
-                  description: "Investing in platforms and technologies enabling the tokenization of real-world assets, unlocking liquidity and democratizing access.",
-                  gradient: "from-fuchsia-500 to-pink-500"
-                },
-                {
-                  icon: BarChart3,
-                  title: "Hedge Funds",
-                  description: "Alternative investment structures allowing investments across stocks, derivatives, currencies, and real estate with sophisticated risk management.",
-                  gradient: "from-indigo-500 to-violet-500"
-                },
-                {
-                  icon: Briefcase,
-                  title: "Private Debt",
-                  description: "Corporate debt investments neither issued on open markets nor financed through traditional banking, offering attractive risk-adjusted returns.",
-                  gradient: "from-violet-500 to-indigo-500"
-                },
-                {
-                  icon: TreePine,
-                  title: "Natural Resources",
-                  description: "Investments in forestry, water, metals, agriculture, and renewable energy development for sustainable long-term value creation.",
-                  gradient: "from-emerald-500 to-teal-500"
-                }
-              ].map((item, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-violet-500/30 transition-all">
-                  <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${item.gradient} flex items-center justify-center mb-6`}>
-                    <item.icon className="w-7 h-7 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">{item.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{item.description}</p>
-                </div>
-              ))}
+              <span>Hands-On Support</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Investment Philosophy Deep Dive */}
-      <section className="py-20 bg-gradient-to-br from-violet-900/20 to-purple-900/20 border-y border-white/10">
+      <section className="py-20 bg-gradient-to-b from-[#0F0A1F] to-slate-900/50">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Our Investment Philosophy</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We partner with visionary founders who are building technologies that have the potential to fundamentally change how the world works
+                We will partner with visionary founders who are building technologies that have the potential to fundamentally change how the world works
               </p>
             </div>
 
@@ -387,6 +328,75 @@ const RainmakerVC: React.FC = () => {
         </div>
       </section>
 
+      {/* Investment Stages */}
+      <section className="py-20 bg-gradient-to-br from-violet-900/20 to-purple-900/20 border-y border-white/10">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">All-Stage Investment Approach</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We plan to invest across the entire venture lifecycle, from earliest concepts to growth-stage scale-ups
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  stage: "Seed",
+                  investment: "$500K - $2M",
+                  focus: "Product-market fit validation",
+                  metrics: "Pre-revenue to $500K ARR",
+                  icon: Lightbulb,
+                  color: "from-yellow-500 to-orange-500"
+                },
+                {
+                  stage: "Series A",
+                  investment: "$2M - $10M",
+                  focus: "Go-to-market acceleration",
+                  metrics: "$500K - $3M ARR",
+                  icon: Rocket,
+                  color: "from-violet-500 to-purple-500"
+                },
+                {
+                  stage: "Series B/C",
+                  investment: "$10M - $30M",
+                  focus: "Market expansion & scaling",
+                  metrics: "$3M - $20M ARR",
+                  icon: TrendingUp,
+                  color: "from-purple-500 to-fuchsia-500"
+                },
+                {
+                  stage: "Growth",
+                  investment: "$30M+",
+                  focus: "Category leadership",
+                  metrics: "$20M+ ARR",
+                  icon: Award,
+                  color: "from-fuchsia-500 to-pink-500"
+                }
+              ].map((stage, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-violet-500/50 transition-all group">
+                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${stage.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                    <stage.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="text-2xl font-bold text-white mb-2">{stage.stage}</div>
+                  <div className="text-violet-400 font-semibold text-lg mb-4">{stage.investment}</div>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-300">{stage.focus}</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <BarChart3 className="w-4 h-4 text-fuchsia-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-400">{stage.metrics}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Investment Criteria */}
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-6">
@@ -394,7 +404,7 @@ const RainmakerVC: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">What We Look For</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We have specific criteria for the companies and founders we back
+                We have specific criteria for the companies and founders we plan to back
               </p>
             </div>
 
@@ -468,9 +478,9 @@ const RainmakerVC: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">How We Support Our Portfolio</h2>
+              <h2 className="text-4xl font-bold text-white mb-4">How We Will Support Our Portfolio</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're hands-on partners who roll up our sleeves to help founders navigate critical challenges and capture opportunities
+                We plan to be hands-on partners who roll up our sleeves to help founders navigate critical challenges and capture opportunities
               </p>
             </div>
 
@@ -527,7 +537,7 @@ const RainmakerVC: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Rainmaker</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                At the forefront of the technology revolution
+                Positioning at the forefront of the technology revolution
               </p>
             </div>
 
@@ -535,26 +545,26 @@ const RainmakerVC: React.FC = () => {
               {[
                 {
                   icon: Globe,
-                  label: "Global Investors",
-                  description: "Access to worldwide capital",
+                  label: "Global Focus",
+                  description: "Worldwide investment scope",
                   color: "text-violet-400"
                 },
                 {
                   icon: Target,
-                  label: "Curated Deals",
-                  description: "Vetted investment opportunities",
+                  label: "Sector Agnostic",
+                  description: "Best opportunities across industries",
                   color: "text-purple-400"
                 },
                 {
                   icon: Brain,
-                  label: "AI-Powered",
-                  description: "Smart deal-making platform",
+                  label: "Technology-First",
+                  description: "Deep tech expertise",
                   color: "text-fuchsia-400"
                 },
                 {
-                  icon: Award,
-                  label: "Since 2015",
-                  description: "Proven track record",
+                  icon: Clock,
+                  label: "Launching Soon",
+                  description: "Get notified at launch",
                   color: "text-indigo-400"
                 }
               ].map((stat, index) => (
@@ -574,29 +584,30 @@ const RainmakerVC: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden bg-gradient-to-br from-violet-900/40 via-purple-900/40 to-fuchsia-900/40">
+      <section id="contact" className="py-24 relative overflow-hidden bg-gradient-to-br from-violet-900/40 via-purple-900/40 to-fuchsia-900/40">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA4MCAwIEwgMCAwIDAgODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjA0KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-30"></div>
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 glass-violet rounded-full px-6 py-2.5 mb-8">
+              <Clock className="w-4 h-4 text-violet-400" />
+              <span className="text-violet-300 text-sm font-medium">Coming Soon</span>
+            </div>
+
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Like what you see?
             </h2>
             <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-              If you are a potential <span className="text-violet-400 font-semibold">Investor</span>, <span className="text-purple-400 font-semibold">User</span>, or <span className="text-fuchsia-400 font-semibold">Technology Partner</span> or have relevant skills, knowledge and experience and want to join our team <span className="text-white font-semibold">please get in touch</span>.
+              If you are a potential <span className="text-violet-400 font-semibold">Investor</span>, <span className="text-purple-400 font-semibold">Founder</span>, or <span className="text-fuchsia-400 font-semibold">Technology Partner</span> or have relevant skills, knowledge and experience and want to join our team <span className="text-white font-semibold">please get in touch</span>.
             </p>
             <p className="text-gray-400 mb-12">
-              We're working hard to put the finishing touches onto Rainmaker VC. Things are going well and we should be ready to help you with Rainmaker VC very soon. If you would like us to contact you when we're ready, just give us your details.
+              We're working hard to put the finishing touches onto Rainmaker VC. Things are going well and we should be ready very soon. If you would like us to contact you when we're ready, just let us know.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a href="mailto:info@rainmaker.vc" className="bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white px-10 py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 shadow-lg shadow-violet-500/20">
+              <a href="mailto:sergo.vashakmadze@rainmaker.partners" className="bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white px-10 py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 shadow-lg shadow-violet-500/20">
                 <Rocket className="w-5 h-5" />
                 Get In Touch
-              </a>
-              <a href="mailto:info@rainmaker.vc" className="bg-white text-gray-900 hover:bg-gray-100 px-10 py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2">
-                <Users className="w-5 h-5" />
-                Join Our Team
               </a>
             </div>
 
