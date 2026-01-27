@@ -8,9 +8,11 @@ export function Header() {
           <nav className="flex items-center justify-between h-16">
             {/* Logo - Left */}
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center shadow-md transition-all duration-300 hover:scale-110 hover:shadow-xl">
-                <span className="text-white font-bold text-lg">R</span>
-              </div>
+              <img
+                src="/logo.png"
+                alt="Rainmaker VC"
+                className="h-10 w-auto transition-all duration-300 group-hover:scale-110"
+              />
               <div className="flex flex-col">
                 <div className="flex items-center">
                   <span className="text-xl font-bold text-white">Rainmaker</span>

@@ -9,9 +9,11 @@ export function Footer() {
         <div className="flex flex-col items-center text-center mb-12">
           {/* Brand Section */}
           <Link to="/" className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center shadow-md">
-              <span className="text-white font-bold text-lg">R</span>
-            </div>
+            <img
+              src="/logo.png"
+              alt="Rainmaker VC"
+              className="h-10 w-auto"
+            />
             <div>
               <h3 className="text-xl font-bold text-white tracking-tight leading-none">
                 Rainmaker<span className="text-violet-400">VC</span>
