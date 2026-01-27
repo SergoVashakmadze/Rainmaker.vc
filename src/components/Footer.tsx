@@ -16,7 +16,7 @@ export function Footer() {
             />
             <div>
               <h3 className="text-xl font-bold text-white tracking-tight leading-none">
-                Rainmaker<span className="text-violet-400">VC</span>
+                Rainmaker <span className="text-violet-400">VC</span>
               </h3>
             </div>
           </Link>
