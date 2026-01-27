@@ -604,13 +604,6 @@ const RainmakerVC: React.FC = () => {
               We're working hard to put the finishing touches onto Rainmaker VC. Things are going well and we should be ready very soon. If you would like us to contact you when we're ready, just let us know.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a href="mailto:sergo.vashakmadze@rainmaker.partners" className="bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white px-10 py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 shadow-lg shadow-violet-500/20">
-                <Rocket className="w-5 h-5" />
-                Get In Touch
-              </a>
-            </div>
-
             <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-violet-400" />

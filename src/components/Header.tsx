@@ -1,11 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Clock } from 'lucide-react';
 
 export function Header() {
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <>
       <header className="fixed top-[46px] left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50">
@@ -25,27 +20,6 @@ export function Header() {
               </div>
             </Link>
 
-            {/* Desktop Right Section */}
-            <div className="hidden lg:flex items-center gap-4">
-              <button
-                onClick={scrollToContact}
-                className="flex items-center gap-2 px-6 py-2.5 rounded-full text-white text-sm font-medium transition-colors bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500"
-              >
-                <Clock className="w-4 h-4" />
-                Get Notified
-              </button>
-            </div>
-
-            {/* Mobile Right Section */}
-            <div className="lg:hidden flex items-center">
-              <button
-                onClick={scrollToContact}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-white text-xs font-medium bg-gradient-to-r from-violet-600 to-purple-600"
-              >
-                <Clock className="w-3 h-3" />
-                Notify
-              </button>
-            </div>
           </nav>
         </div>
       </header>
