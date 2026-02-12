@@ -54,15 +54,13 @@
     }
     </script>
 
-    <!-- Hide pre-rendered SEO content until React + CSS loads -->
-    <style>#root{opacity:0}</style>
-
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://s3.tradingview.com/tv.js"></script>
   </head>
   <body>
     <div id="root">
+      <div style="display:none" aria-hidden="true">
       <!-- Pre-rendered content for SEO - React will replace this on mount -->
       <header>
         <nav aria-label="Main navigation">
@@ -132,6 +130,7 @@
         <p>&copy; 2026 Rainmaker VC. All Rights Reserved.</p>
         <p>Part of the <a href="https://iomarkets.org">IoMarkets</a> ecosystem.</p>
       </footer>
+      </div>
     </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
