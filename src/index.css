@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Reveal app once CSS is loaded (counteracts inline opacity:0 that hides pre-rendered SEO content) */
+#root { opacity: 1; }
+
 /* Layout heights - consistent across all domains */
 :root {
   --ticker-height: 46px;
